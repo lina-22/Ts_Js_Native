@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="my_div" style="background-color: brown;">
+    <h1>Hello</h1>
+    <h1>Bye</h1>
+
+  </div>
+
+    <button onclick="msg()">Clcick Me</button>
+    <p id="p1"></p>
+    <button onclick="msg2()">Clcick Me2</button>
+
+
+    <script>
+
+     function msg(){
+       let ms= document.querySelector("#p1");
+       ms.innerHTML="you have clicked p1"; 
+     }
+     function msg2(){
+        let ms= document.querySelector("#p1");
+       ms.innerHTML="you have clicked p2"; 
+     }
+
+     var newLine = document.createElement("h1");
+     var newTopic = document.createTextNode( "i am adding new heading");
+
+     var addingAll = newLine.appendChild(newTopic);
+     
+     var myDiv = document.getElementById("my_div");
+     myDiv.appendChild(newLine);
+
+    </script>
+</body>
+</html>
