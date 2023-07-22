@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>Programming Language</h2>
+      <label for="programe">
+        <input type="checkbox" name="programe" id="c" value="c" />C
+      </label>
+      <label for="java">
+        <input type="checkbox" name="programe" id="c" value="java" />Java
+      </label>
+    </div>
+
+    <script>
+      const programs = document.querySelectorAll("input[name=programe]");
+      console.log(programs);
+
+      Array.from(programs).map((program) => {
+        program.addEventListener("change", programHandler);
+      });
+
+      function programHandler(e) {
+        if (e.target.checked) {
+          console.log("checked");
+          console.log(e.target.value);
+        }
+      }
+    </script>
+  </body>
+</html>
