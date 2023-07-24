@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var numbers = [20, 5, 7, 60, 80, 70];
+
+      var [num1, num2, ...z] = numbers;
+
+      console.log(num1, num2, ...z);
+
+      //swap variable
+
+      let a = 10,
+        b = 20;
+
+      [a, b] = [b, a];
+
+      console.log(a);
+      console.log(b);
+
+      //   object disstructuring
+
+      let students = {
+        id: 1,
+        name: "Kashif",
+        gpa: 3.98,
+      };
+
+      let { id, name, gpa } = students;
+      console.log(id);
+      console.log(name);
+
+      //distructuring function parameters
+
+      const studentInfo = ({ id, fullName }) => {
+        console.log(`${id}, ${fullName}`);
+      };
+
+      const student = {
+        id: 101,
+        fullName: "Lina",
+      };
+      studentInfo(student);
+    </script>
+  </body>
+</html>

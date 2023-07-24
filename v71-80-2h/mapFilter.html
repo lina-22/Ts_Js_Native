@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <div id="myDiv1"></div>
+    <script>
+      var numbers = [10, 20, 30, 40, 50, 60];
+
+      var sqNbs = numbers.map(function (x) {
+        return x * x;
+      });
+
+      console.log(sqNbs);
+      let ar = document.getElementById("myDiv1");
+      ar.append(sqNbs);
+
+      let newLine = document.createElement("h4");
+      let text = document.createTextNode("hello");
+      newLine.appendChild(text);
+      let myDiv = document.getElementById("myDiv");
+      myDiv.appendChild(newLine);
+    </script>
+  </body>
+</html>

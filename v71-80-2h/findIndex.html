@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [10, 5, 4, 89, 75, 2, 5];
+
+      const evenNumber = (value, index, arr) => {
+        if (value % 2 === 0) return value;
+      };
+      //   let firstEvenNumber = numbers.find((x) => x % 2 === 0);
+      let firstEvenNumber = numbers.find(evenNumber);
+      let firstEvenNumber1 = numbers.findIndex(evenNumber);
+      console.log(firstEvenNumber1);
+
+      let students = [
+        {
+          id: 1,
+          name: "Kashif",
+          gpa: 3.98,
+        },
+        {
+          id: 2,
+          name: "Kaisan",
+          gpa: 4.0,
+        },
+        {
+          id: 3,
+          name: "sayed",
+          gpa: 3.0,
+        },
+        {
+          id: 4,
+          name: "kazul",
+          gpa: 2.98,
+        },
+      ];
+
+      console.log(students.find((x) => x.gpa > 3));
+    </script>
+  </body>
+</html>
