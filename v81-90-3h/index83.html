@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // console.log(window);
+      // event - onload(), onerror()
+      // property - response, responseText, responseType, responseURL, status, statusText
+      // function - open(), send(), setRequestHeader()
+
+      console.clear();
+
+      const getData = () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/poste");
+        xhr.send();
+        // console.log(xhr);
+      };
+
+      getData();
+    </script>
+  </body>
+</html>

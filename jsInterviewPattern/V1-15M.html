@@ -1,0 +1,84 @@
+<!-- RoadsideCoder Mix - Javascript Interview Questions -->
+<!-- Javascript Interview Questions ( Var, Let and Const ) - Hoisting, Scoping, Shadowing and more -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      1; //scope
+
+      //   {
+      //     let a = 5;
+      //   }
+      //   console.log(a);
+
+      //   {
+      //     let b = 5;
+      //   }
+      //   console.log(b);
+
+      //   {
+      //     var c = 5;
+      //   }
+      //   console.log(c);
+
+      //   variable Shadowing
+
+      //   function test() {
+      //     let a = "Hello";
+
+      //     if (true) {
+      //       let a = "Hi";
+      //       console.log(a);
+      //     }
+      //     console.log(a);
+      //   }
+
+      //   test();
+
+      2; //shadowing
+
+      //   function test() {
+      //     var a = "Hello";
+      //     let b = "Bye";
+
+      //     if (true) {
+      //       let a = "hi";
+      //       //   var b = "Good Bye";
+      //       console.log(a);
+      //       console.log(b);
+      //     }
+      //   }
+
+      //   test();
+
+      // var a; same variable can declare at many times but let and const cannot
+
+      3; //re-declare
+      //   var a = 5;
+      //   a = 6;
+
+      //   let b = 6;
+      //   b = 7;
+
+      //   const c = 7; //it is not possible to re-declare
+      //   c = 10;
+
+      //hoisting var can be hoisting but let and const stay at temporary deadzone
+
+      function abc() {
+        console.log(a, b, c);
+
+        const c = 30;
+        let b = 20;
+        var a = 10;
+      }
+      abc();
+    </script>
+  </body>
+</html>
