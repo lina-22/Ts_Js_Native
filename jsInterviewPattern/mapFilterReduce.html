@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const nums = [1, 2, 3, 4, 5];
+
+      //   const multiplyThree = nums.map((num, i, arr) => {
+      //     return num * 3;
+      //   });
+
+      //   console.log(multiplyThree);
+
+      //   const numsFilter = [1, 2, 3, 4, 5];
+      //   const moreThanTwo = numsFilter.filter((num) => {
+      //     return num > 2;
+      //   });
+      //   console.log(moreThanTwo);
+
+      // const numsReduce = [1, 2, 3, 4, 5];
+
+      // const sum = numsReduce.reduce((acc, curr, i, arr) => {
+      //   return acc + curr; //acc the initial value
+      // }, 0);
+
+      // console.log(sum);
+
+      //Polyfill(prototype) for map()
+
+      // Array.map((num, i, arr) => {});
+      // Array.prototype.myMap = function (cb) {
+      //   let temp = [];
+
+      //   for (let i = 0; i < this.length; i++) {
+      //     const element = array[i];
+      //   }
+      // };
+
+      //       <!-- foreach and map both are arry function to loop through item to the array  -->
+
+      // <!-- foreach modify the original arry but never return anything while map return  -->
+
+      const arr1 = [2, 3, 4, 5, 6];
+
+      const mapResult = arr1.map((ar) => {
+        return ar + 2;
+      });
+      // .filter  map can chain with other method like filter but foreach cannot chain because it does not return anything;
+
+      const foreachResult = arr1.forEach((ar, i) => {
+        arr1[i] = ar + 3;
+      });
+
+      console.log(mapResult, foreachResult, arr1);
+    </script>
+  </body>
+</html>
