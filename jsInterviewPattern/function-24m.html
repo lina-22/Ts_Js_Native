@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Q1 - What is function declaration/defination/statement?
+
+      function square(num) {
+        return num * num;
+      }
+      console.log(square);
+      //   Q2 - Function expression? - When you store a function inside a variable it's call a function expression
+      // inside a variable annynimus function will store
+      // anynimous function also use in callback function
+
+      const square1 = function (num) {
+        return num * num;
+      };
+
+      console.log(square1(5));
+
+      //   Q3- What is first class function ? the function treated as like variable those function are called first class function
+      // - what is variable is do a function can do
+      //  - function can pass at another function, use, manipulated,return etc etc
+
+      function square2(num) {
+        return num * num;
+      }
+
+      function displayfunction(fn) {
+        console.log("Square is " + fn(5));
+      }
+
+      displayfunction(square2);
+
+      //   Q-5 What is IIFE?- immediately invoked function expression
+
+      (function square3(num) {
+        console.log(num * num);
+      })(5);
+
+      //   an exemple of IIFE
+
+      //   Closer - to acces variable and function are laxically out of it's scope is closer. (outer scope)
+      (function (x) {
+        return (function (y) {
+          console.log(x);
+        })(2);
+      })(1);
+
+      //   Q -6 funtion Hoisting - function work if call before declre
+
+      console.log(square);
+      function square(num) {
+        return num * num;
+      }
+
+      functionName();
+      console.log(x);
+
+      function functionName() {
+        console.log("Coder");
+      }
+      var x = 5;
+    </script>
+  </body>
+</html>
