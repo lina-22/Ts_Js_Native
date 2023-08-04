@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Web storage API - allows us to store and read data in browser;
+      //Web storage API - localStorage, sessionStorage
+      //localStorage - store, read, update and remove data
+      // no expiray date: date never gets lost even if you close the browse
+
+      // localStorage store data as key value pair - string
+
+      //setItem(key, value)
+
+      // console.log(localStorage);
+      // setItem(key,value)
+      localStorage.setItem("userName", "LinaHaque");
+      localStorage.setItem("password", "22LinaHaque");
+
+      // getItem(key)
+
+      const userName = localStorage.getItem("userName");
+      const password = localStorage.getItem("password");
+      console.log(userName, password);
+
+      //updateItem
+      localStorage.setItem("userName", "Lina");
+      localStorage.setItem("password", "22Lina");
+
+      // removeItem
+      localStorage.removeItem("userName");
+
+      // setArray
+      const countries = ["Aus", "BD", "Usa"];
+
+      localStorage.setItem("countries", JSON.stringify(countries));
+
+      // getItem(key)
+      const countriesList = JSON.parse(localStorage.getItem("countries"));
+      console.log(countriesList);
+      // localStorage.clear();
+    </script>
+  </body>
+</html>

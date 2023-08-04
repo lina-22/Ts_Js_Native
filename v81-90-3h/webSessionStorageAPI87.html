@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //localstorage vs sessionStorage
+      // 10mb vs 5mb
+      // permanent vs session(tab)
+      sessionStorage.setItem("user1", "lina1");
+      const userName = sessionStorage.getItem("user");
+      console.log(userName);
+      sessionStorage.removeItem("user1");
+      //   sessionStorage.clear();
+
+      const user = {
+        id: 101,
+        name: "lina",
+      };
+
+      sessionStorage.setItem("user", JSON.stringify(user));
+
+      const userInf = sessionStorage.getItem(
+        JSON.parse(sessionStorage.getItem("user"))
+      );
+      console.log(userInf);
+    </script>
+  </body>
+</html>
