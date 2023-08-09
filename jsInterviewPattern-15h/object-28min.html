@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // *************************one***************
+      //   const user = {
+      //     name: "Lina Coder",
+      //     age: 36,
+      //   };
+      //   user.name = "Just Lina";
+      //   delete user.age;
+      //   console.log(user);
+      // *************************one***************
+
+      // *************************two***************
+      //   const func = (function (a) {
+      //     delete a; // it will not effet here because delete keyword is use only delete the property from a object
+      //     // delete key word not use to delete a local variable
+      //     return a;
+      //   })(5);
+
+      //   console.log(func);
+      // *************************two***************
+
+      // *************************three***************
+
+      //   const user = {
+      //     name: "Lina Coder",
+      //     age: 36,
+      //     "like this vedio": true,
+      //   };
+      //   delete user["like this vedio"];
+      //   console.log(user["like this vedio"]);
+      //   console.log(user);
+      // *************************three***************
+
+      // *************************four***************
+      //   const property = "firstName";
+      //   const name = "Lina haq";
+      //   const user = {
+      //     [property]: name,
+      //   };
+      //   console.log(user.firstName);
+      // *************************four***************
+
+      // *************************five***************
+      // const user = {
+      //   name: "Lina Haq",
+      //   age: 36,
+      //   isTotallyAwesome: true,
+      // };
+      // for (key in user) {
+      //   console.log(user[key]);
+      // }
+      // console.log(user);
+      // *************************five***************
+
+      // *************************six***************
+
+      //   what's the output?
+
+      //   const obj = {
+      //     a: "one",
+      //     b: "two",
+      //     a: "three",
+      //   };
+      //   console.log(obj);
+      // *************************six***************
+
+      // *************************seven***************
+
+      //question 2 - Create a function multiplyByTwo(obj) that multiplies all numeric property values of nums by2.
+      // let nums = {
+      //   a: 100,
+      //   b: 200,
+      //   title: "My nums",
+      // };
+
+      // multiplyByTwo(nums);
+      // // for in loop use for loop through inside the object
+      // function multiplyByTwo(obj) {
+      //   for (key in obj) {
+      //     if (typeof obj[key] === "number") {
+      //       obj[key] *= 2;
+      //     }
+      //   }
+      // }
+      // console.log(nums);
+      // *************************seven***************
+
+      // *************************eight***************
+      // output?
+      // const a = {};
+      // const b = { key: "b" };
+      // const c = { key: "c" };
+
+      // a[b] = 123;
+      // a[c] = 456;
+      // console.log(a[b]);
+      // *************************eight***************
+
+      // *************************nine***************
+
+      // What's JSON.stringify and JSON.parse?
+
+      // const user = {
+      //   name: "Lina",
+      //   age: 37,
+      // };
+
+      // const strObj = JSON.stringify(user);
+      // console.log(strObj);
+      // localStorage.setItem("test", strObj); // stingify use case when store objet at the local storage
+
+      // console.log(JSON.parse(strObj));
+
+      // *************************nine***************
+
+      // *************************ten***************
+
+      // console.log([..."Lydia"]);
+
+      // const user = { name: "Lydia", age: 21 };
+      // const admin = { admin: true, ...user };
+
+      // console.log(admin);
+      // admin: true, name: 'Lydia', age: 21}
+      // admin
+      // :  true
+      // age :21
+      // name : "Lydia"
+      // *************************ten***************
+
+      // *************************eleven***************
+
+      // const settings = {
+      //   username: "Lina",
+      //   level: 19,
+      //   health: 90,
+      // };
+
+      // const data = JSON.stringify(settings, ["level", "health"]);
+
+      // console.log(data);
+
+      // *************************eleven***************
+
+      // *************************tweelve***************
+
+      // const shape = {
+      //   radius: 10,
+      //   diameter() {
+      //     return this.radius * 2;
+      //   },
+      //   perimeter: () => 2 * Math.PI * this.radius,
+      // };
+
+      // console.log(shape.diameter());
+      // console.log(shape.perimeter());
+      // *************************tweelve***************
+
+      // *************************th***************
+
+      // let user = {
+      //   name: "Lina",
+      //   age: 37,
+      //   fullName: {
+      //     first: "Lina",
+      //     last: "Haque",
+      //   },
+      // };
+
+      // const {
+      //   fullName: { first },
+      // } = user;
+      // console.log;
+      // // const { name } = user;
+
+      // console.log(first);
+      // *************************th***************
+
+      // *************************fourteen***************
+      // function getItems(fruitList, favoriteFruit, ...args) {
+      //   return [...fruitList, ...args, favoriteFruit];
+      // }
+
+      // console.log("====================================");
+      // console.log(getItems(["banana", "apple"], "pear", "orange"));
+      // console.log("====================================");
+      // // *************************fourteen***************
+
+      // // *************************fifeteen***************
+
+      // let c = { greeting: "Hey!" };
+      // let d;
+
+      // d = c;
+      // c.greeting = "Hello";
+      // console.log(d.greeting); //Hello
+      // // *************************fifeteen***************
+
+      // // *************************sixeteen***************
+      // console.log({ a: 1 } == { a: 1 }); //false
+      // console.log({ a: 1 } === { a: 1 }); //false
+      // // *************************sixeteen***************
+
+      // // *************************seventeen***************
+      // let person = { name: "Lydia" };
+      // const members = [person];
+      // person.name = null;
+
+      // console.log(members);
+      // // *************************seventeen***************
+
+      // // *************************eighteen***************
+
+      // const value = { number: 10 };
+
+      // const multiply = (x = { ...value }) => {
+      //   console.log((x.number *= 2));
+      // };
+
+      // multiply(); //20
+      // multiply(); //20
+      // multiply(value); //20
+      // multiply(value); //40
+      // // *************************eighteen***************
+
+      // // *************************nineteen***************
+      // function changeAgeAndReference(person) {
+      //   (person.age = 25),
+      //     (person = {
+      //       name: "Jhon",
+      //       age: 50,
+      //     });
+      //   return person;
+      // }
+
+      // const personObj1 = {
+      //   name: "Alex",
+      //   age: 30,
+      // };
+
+      // const personObj2 = changeAgeAndReference(personObj1);
+
+      // console.log(personObj1);
+      // console.log(personObj2);
+      // // *************************nineteen***************
+      // // *************************tweenty***************
+      //what is shallow copy and a deep copy of an object?
+
+      let user = {
+        name: "cloneCoder",
+        age: 36,
+      };
+
+      // const objClone = Object.assign({}, user);
+      // const objClone = JSON.parse(JSON.stringify(user));
+      const objClone = { ...user };
+      objClone.name = "Lina ";
+      console.log(user, objClone);
+      // // *************************tweenty***************
+    </script>
+  </body>
+</html>
