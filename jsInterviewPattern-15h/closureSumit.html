@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function stopWatch() {
+        var startTime = Date.now();
+        console.log(startTime);
+
+        function getDelay() {
+          console.log(Date.now() - startTime);
+        }
+
+        return getDelay;
+      }
+
+      var timer = stopWatch();
+
+      for (var i = 0; i < 100000000; i++) {
+        var a = Math.random() * 1000000;
+      }
+
+      timer();
+      console.dir(timer);
+    </script>
+  </body>
+</html>
+
+<!-- https://www.youtube.com/watch?v=9acXwUkddZI&t=0s -->

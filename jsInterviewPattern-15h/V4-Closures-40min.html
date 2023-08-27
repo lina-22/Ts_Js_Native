@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Closures(বন্ধ) in javascript
+      //Lexical (আভিধানিক) Scope
+
+      var name = "Lina";
+      //global scope
+      function local() {
+        //local scope
+        // console.log(name); //but if here declare the variable and console from outside it will not show the result
+      }
+      local();
+
+      //***************Closures******//
+      var username = "li";
+      function makeFunc() {
+        var name = "Mozilla";
+        function displayName(num) {
+          console.log(name, num, username);
+        }
+        return displayName;
+      }
+
+      // var myFunc = makeFunc();
+      // myFunc();
+      makeFunc()(5);
+    </script>
+  </body>
+</html>
